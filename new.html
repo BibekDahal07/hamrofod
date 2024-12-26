@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamro Food</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(255, 255, 255, 0.8); /* Slight transparency */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #FFD700; /* Gold */
+            text-transform: uppercase;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 10px;
+        }
+
+        header nav ul li button {
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            background: #212121; /* Charcoal Black */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        header nav ul li button:hover {
+            background: #FFD700; /* Gold */
+            color: #212121; /* Charcoal Black */
+            border: 2px solid #FFD700;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('hi.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7); /* Dim the background for better readability */
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero .buttons button {
+            background: #FFD700; /* Gold */
+            color: #212121; /* Charcoal Black */
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .hero .buttons button:hover {
+            background: #212121; /* Charcoal Black */
+            color: #FFD700; /* Gold */
+            transform: scale(1.1);
+        }
+
+        /* Links and Buttons */
+        a {
+            text-decoration: none;
+            color: #FFD700; /* Gold */
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #FF8C00; /* Orange-Gold */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Navigation Bar -->
+        <header>
+            <div class="logo">Hamro Food</div>
+            <nav>
+                <ul>
+                    <li><button onclick="location.href='#home'">Home</button></li>
+                    <li><button onclick="location.href='#menu'">Menu</button></li>
+                    <li><button onclick="location.href='#special'">Our Special</button></li>
+                    <li><button onclick="location.href='#contact'">Contact</button></li>
+                    <li><button onclick="location.href='#signup'">Sign Up</button></li>
+                    <li><button onclick="location.href='#login'">Login</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h1>Hamro Food: Taste the Tradition</h1>
+            <p>
+                Experience authentic Nepali flavors, from delicious momos to flavorful dal-bhat.
+                Order online or book your table for a dining experience that brings Nepal to your table.
+            </p>
+            <div class="buttons">
+                <button onclick="location.href='#order'">Order Now</button>
+                <button onclick="location.href='#reserve'">Reserve a Table</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

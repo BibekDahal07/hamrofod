@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Hamro Food</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav ul li button:hover {
+            text-decoration: underline;
+        }
+
+        .restaurants {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .restaurant-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .restaurant-card:hover {
+            transform: scale(1.05);
+        }
+
+        .restaurant-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .restaurant-info {
+            padding: 10px;
+        }
+
+        .restaurant-info h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+
+        .restaurant-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: gray;
+        }
+
+        .highlight {
+            background-color: yellow;
+            animation: highlightAnimation 1s ease-in-out;
+        }
+
+        @keyframes highlightAnimation {
+            from {
+                background-color: yellow;
+            }
+            to {
+                background-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Hamro Food
+        </div>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='menu.html'">Menu</button></li>
+                <li><button onclick="location.href='#special'">Our Special</button></li>
+                <li><button onclick="location.href='#contact'">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="restaurants">
+        <!-- Restaurant Cards with Links -->
+        <div class="restaurant-card" onclick="window.location.href='food-details.html?restaurant=PizzaHut'">
+            <img src="hi.jpg" alt="Pizza Hut">
+            <div class="restaurant-info">
+                <h3>Pizza Hut</h3>
+                <p>Pizzas, Parasia Road</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='food-details.html?restaurant=SanjuKaDhaba'">
+            <img src="hi.jpg" alt="Sanju Ka Dhaba">
+            <div class="restaurant-info">
+                <h3>Sanju Ka Dhaba</h3>
+                <p>North Indian, South Indian, Parasia Road</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='food-details.html?restaurant=MurariFoods'">
+            <img src="hi.jpg" alt="Murari Foods">
+            <div class="restaurant-info">
+                <h3>Murari Foods</h3>
+                <p>Fast Food, New Road</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='food-details.html?restaurant=BibeksCafe'">
+            <img src="hi.jpg" alt="Bibek's Cafe">
+            <div class="restaurant-info">
+                <h3>Bibek's Cafe</h3>
+                <p>Coffee, Snacks, City Center</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

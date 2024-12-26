@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Description</title>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        h1 {
+            font-size: 28px;
+            margin-top: 0px;
+            padding-top: 230px;
+            padding-left: 600px;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 570px;
+        }
+        button.back {
+            margin-top: 20px;
+            margin-left: 670px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button.back:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Hamro Food</div>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='index.html'">Home</button></li>
+                <li><button onclick="location.href='menu.html'">Menu</button></li>
+                <li><button onclick="location.href='our_special.html'">Our Special</button></li>
+                <li><button onclick="location.href='contact.html'">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Item Not Found!</h1>
+        <p>The requested item does not exist.</p>
+        <button class="back" onclick="goBack()">Back</button>
+    </main>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

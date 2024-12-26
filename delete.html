@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Ordering</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #a29c9c;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero {
+            position: relative;
+            height: 90vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('hi.jpg');
+            background-size: cover;
+            background-position: center;
+           
+            z-index: -1;
+        }
+
+
+
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 15px;
+            width: 300px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 15px 20px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .search-bar button:hover {
+            background-color: #c44b28;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">FoodieHub</div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Our Special</a></li>
+            <li><a href="#">Log in</a></li>
+            <li><a href="#">Sign up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Hamro Food: Taste the Tradition</h1>
+        <p>Experience authentic Nepali flavors, from delicious momos to flavorful dal-bhat.
+             Order online or book your table for a dining experience that brings Nepal to your
+              table.</p>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+        <button>Search</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 FoodieHub. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
